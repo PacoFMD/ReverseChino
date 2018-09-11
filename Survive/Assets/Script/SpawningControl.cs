@@ -6,7 +6,7 @@ public class SpawningControl : MonoBehaviour {
     public GameObject[] goSpawner;
     int CuantosEnemigos = 28, x;
     int[] posicion = new int[20]; //siempre sabemos la cantidad de spawnpoint que va a ver 
-    public float tiempo = 0;
+    public float tiempo = 0, TiempoDeEspera = 10;
     // Use this for initialization
     void Start()
     {
@@ -18,7 +18,7 @@ public class SpawningControl : MonoBehaviour {
     void Update () {
         tiempo += Time.deltaTime;
 
-		if(tiempo >= 5)
+		if(tiempo >= TiempoDeEspera)
         {
             LosEnemigos();
             x = 0;

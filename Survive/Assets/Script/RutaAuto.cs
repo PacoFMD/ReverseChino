@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class RutaAuto : MonoBehaviour {
- 
- 
+
+    public PoderCaminar scPC;
     [SerializeField]
     public Transform objetivo;
     NavMeshAgent navMeshEnemigo;
@@ -36,16 +36,20 @@ public class RutaAuto : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-      //  transform.LookAt(jugador,Vector3(position.x, position.y, position.z));
+        //  transform.LookAt(jugador,Vector3(position.x, position.y, position.z));
+        Seguimiento();
 	}
 
     void Seguimiento()
     {
-        if(objetivo != null)
+        if (scPC.Sigo)
         {
-            Debug.Log(objetivo.name);
-            Vector3 nuevaPos = objetivo.transform.position;
-            navMeshEnemigo.SetDestination(nuevaPos);
+            if (objetivo != null)
+            {
+                Debug.Log(objetivo.name);
+                Vector3 nuevaPos = objetivo.transform.position;
+                navMeshEnemigo.SetDestination(nuevaPos);
+            }
         }
     }
 }
