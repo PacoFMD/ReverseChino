@@ -24,8 +24,9 @@ public class Chino_FuncionesMenu : MonoBehaviour {
     public void Resetearmenu()
     {
         if (Actual != null) Destroy(Actual);
-        MenuPausa.transform.Find("MenuOclave").gameObject.SetActive(false);
-        MenuPausa.transform.Find("BotonesMenuPausa").gameObject.SetActive(true);
+        /*MenuPausa.transform.Find("MenuOclave").gameObject.SetActive(false);
+        /*MenuPausa.transform.Find("BotonesMenuPausa").gameObject.SetActive(true);*/
+
     }
 	
 }
