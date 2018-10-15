@@ -130,6 +130,11 @@ public class Chino_Movimiento : MonoBehaviour
             enpausa = false;
             Menufunc.Resetearmenu();
             MenuPausa.SetActive(false);
+            /*if (Chino_FuncionesMenu.Menu1 == true)
+            {
+                Chino_FuncionesMenu.Menu1 = false;
+                print("nomas");
+            }*/
         }
 
     }
