@@ -24,10 +24,12 @@ public class Chino_Movimiento : MonoBehaviour
     Vector3 PuntoB;
     public float tiempMovim; 
     float factMovim;
+    private Chino_FuncionesMenu Menufunc;
 
 
     void Start()
     {
+        Menufunc= FindObjectOfType<Chino_FuncionesMenu>();
         factMovim = 1.0f / tiempMovim;
         Rb = GetComponent<Rigidbody>();
         Tra = GetComponent<Transform>();
@@ -126,7 +128,13 @@ public class Chino_Movimiento : MonoBehaviour
         else if (Menu && enpausa)
         {
             enpausa = false;
+            Menufunc.Resetearmenu();
             MenuPausa.SetActive(false);
+            /*if (Chino_FuncionesMenu.Menu1 == true)
+            {
+                Chino_FuncionesMenu.Menu1 = false;
+                print("nomas");
+            }*/
         }
 
     }

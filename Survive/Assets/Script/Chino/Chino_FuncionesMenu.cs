@@ -5,6 +5,7 @@ using UnityEngine;
 public class Chino_FuncionesMenu : MonoBehaviour {
 
     public GameObject[] Botones;
+    public GameObject[] Submenus;
     public GameObject MenuPausa;
     GameObject Actual;
     public Transform PuntoAparicion;
@@ -24,8 +25,16 @@ public class Chino_FuncionesMenu : MonoBehaviour {
     public void Resetearmenu()
     {
         if (Actual != null) Destroy(Actual);
-        MenuPausa.transform.Find("MenuOclave").gameObject.SetActive(false);
-        MenuPausa.transform.Find("BotonesMenuPausa").gameObject.SetActive(true);
+        Submenus[0].SetActive(true);
+        for (int i = 1; i < Submenus.Length; i++)
+        {
+            Submenus[i].SetActive(false);
+        }
+
+        /*MenuPausa.transform.Find("MenuOclave").gameObject.SetActive(false);
+        /*MenuPausa.transform.Find("BotonesMenuPausa").gameObject.SetActive(true);*/
+
     }
-	
+
+
 }
