@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour {
         PuedoSpawnear = !PuedoSpawnear;
     }
 
-    public int Invocador(int cuantos)
+    public void Invocador(int cuantos)
     {
         
         Debug.Log(this.name);
@@ -36,6 +36,6 @@ public class Spawner : MonoBehaviour {
             }
         }
         
-        return 0;
+        
     }
 }

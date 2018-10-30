@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54114614092101584}
   m_Layer: 0
   m_Name: Enemigo
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sigo: 1
+  Activo: 1
 --- !u!114 &114818824609938724
 MonoBehaviour:
   m_ObjectHideFlags: 1

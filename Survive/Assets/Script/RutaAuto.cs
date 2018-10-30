@@ -12,6 +12,7 @@ public class RutaAuto : MonoBehaviour {
 
     private void Awake()
     {
+        objetivo = GameObject.Find("Player").GetComponent<Transform>();
         //miPos = transform;
     }
 
@@ -21,12 +22,12 @@ public class RutaAuto : MonoBehaviour {
 
         if(navMeshEnemigo == null)
         {
-            Debug.Log("Falta el navmesh del objecto " + gameObject.name);
+           // Debug.Log("Falta el navmesh del objecto " + gameObject.name);
 
         }
         else
         {
-            Debug.Log("Si hay NavMesh");
+            //Debug.Log("Si hay NavMesh");
             Seguimiento();
         }
 
@@ -46,7 +47,7 @@ public class RutaAuto : MonoBehaviour {
         {
             if (objetivo != null)
             {
-                Debug.Log(objetivo.name);
+                //Debug.Log(objetivo.name);
                 Vector3 nuevaPos = objetivo.transform.position;
                 navMeshEnemigo.SetDestination(nuevaPos);
             }

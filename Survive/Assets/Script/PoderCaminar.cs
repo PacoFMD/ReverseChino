@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class PoderCaminar : MonoBehaviour {
     public bool Sigo = true;
+    public bool Activo = true;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Detector")
+        {
+
+            Activo = true;
+            Sigo = true;
+        }
+    }
 
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "Detector")
         {
-            Sigo = !Sigo;
-            Debug.Log(Sigo);
+            Sigo = false;
+            //Debug.Log(Sigo);
+            Activo = false;
         }
     }
 
